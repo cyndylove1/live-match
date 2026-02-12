@@ -4,39 +4,32 @@ interface MatchEventsProps {
   events: MatchEvent[];
 }
 
-const eventConfig: Record<string, { icon: string; color: string; bg: string }> =
-  {
-    GOAL: {
-      icon: "⚽",
-      color: "text-green-600",
-      bg: "bg-green-100",
-    },
-    YELLOW_CARD: {
-      icon: "•",
-      color: "text-yellow-600",
-      bg: "bg-yellow-100",
-    },
-    RED_CARD: {
-      icon: "•",
-      color: "text-red-600",
-      bg: "bg-red-100",
-    },
-    SUBSTITUTION: {
-      icon: "•",
-      color: "text-blue-600",
-      bg: "bg-blue-100",
-    },
-    FOUL: {
-      icon: "•",
-      color: "text-orange-600",
-      bg: "bg-orange-100",
-    },
-    SHOT: {
-      icon: "•",
-      color: "text-purple-600",
-      bg: "bg-purple-100",
-    },
-  };
+const eventConfig: Record<string, { icon: string; color: string }> = {
+  GOAL: {
+    icon: "⚽",
+    color: "text-green-600",
+  },
+  YELLOW_CARD: {
+    icon: "🟨",
+    color: "text-yellow-600",
+  },
+  RED_CARD: {
+    icon: "🟥",
+    color: "text-red-600",
+  },
+  SUBSTITUTION: {
+    icon: "🔄",
+    color: "text-blue-600",
+  },
+  FOUL: {
+    icon: "⚠️",
+    color: "text-orange-600",
+  },
+  SHOT: {
+    icon: "🎯",
+    color: "text-purple-600",
+  },
+};
 
 export function MatchEvents({ events }: MatchEventsProps) {
   if (!events || events.length === 0) {
@@ -61,7 +54,7 @@ export function MatchEvents({ events }: MatchEventsProps) {
             <div className="flex-shrink-0 w-12">
               <div className="text-center">
                 <div
-                  className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${config.bg}`}
+                  className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${config.color}`}
                 >
                   <span
                     className={`${config.color} text-lg font-semibold leading-none`}

@@ -47,7 +47,6 @@ export function Chat({ matchId }: ChatProps) {
     }
   };
 
-
   const handleTyping = () => {
     if (message.trim() && !typingUsers.length) {
       startTyping();
@@ -64,11 +63,10 @@ export function Chat({ matchId }: ChatProps) {
 
   return (
     <div className="flex flex-col h-[500px]">
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-4 gap-x-3">
         <div className="flex items-center space-x-2">
           <div className="text-sm font-medium text-gray-600">Chat Room</div>
-          <div className="md:text-xs text-sm text-gray-500 bg-gray-100 px-2 whitespace-nowrap
- py-1 rounded">
+          <div className="md:text-xs text-center text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">
             {users.length} user{users.length !== 1 ? "s" : ""} online
           </div>
         </div>
