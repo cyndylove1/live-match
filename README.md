@@ -78,15 +78,9 @@ live-match-center/
 
 ## Deployment
 
-**Live Application**: https://live-match.vercel.app  
-**GitHub Repository**: https://github.com/yourusername/live-match-center
+**Live Application**: https://live-match-psi.vercel.app/  
+**GitHub Repository**: https://github.com/cyndylove1/live-match
 
-## Setup Instructions
 
-1. Clone the repository:
 
-```bash
-git clone https://github.com/yourusername/live-match-center.git
-cd live-match
 
-```
