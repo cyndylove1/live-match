@@ -1,4 +1,3 @@
-import { toast } from "react-toastify";
 import { Match, MatchDetail } from "./types";
 
 
@@ -32,7 +31,7 @@ export async function fetchApi<T>(
     const responseData = await response.json();
 
     if (!responseData.success) {
-      toast.error ApiError(responseData.message || "API request failed");
+      throw new ApiError(responseData.message || "API request failed");
     }
 
     return responseData.data as T;
@@ -41,7 +40,7 @@ export async function fetchApi<T>(
       throw error;
     }
 
-    toast.error ApiError(
+    throw new ApiError(
       error instanceof Error ? error.message : "Network error",
     );
   }
