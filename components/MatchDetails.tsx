@@ -31,7 +31,9 @@ export function MatchDetail({ match }: MatchDetailProps) {
 
           <div className="text-center">
             <div className="text-sm text-gray-500">Minute</div>
-            <div className="md:text-2xl text-xl font-bold">{match.minute}'</div>
+            <div className="md:text-2xl text-xl font-bold text-gray-600">
+              {match.minute}'
+            </div>
             <div className="text-sm text-gray-500 capitalize">
               {match.status.replace("_", " ").toLowerCase()}
             </div>
@@ -52,8 +54,8 @@ export function MatchDetail({ match }: MatchDetailProps) {
             <div className="md:text-3xl text-xl font-bold text-gray-600 mx-4">
               {match.homeScore}
             </div>
-            <div className="md:text-3xl text-xl text-gray-400">-</div>
-            <div className="md:text-3xl text-xl  font-bold mx-4">
+            <div className="md:text-3xl text-xl text-gray-600">-</div>
+            <div className="md:text-3xl text-xl font-bold mx-4 text-gray-600">
               {match.awayScore}
             </div>
           </div>
@@ -93,8 +95,8 @@ export function MatchDetail({ match }: MatchDetailProps) {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <h2 className="text-xl font-bold mb-4">Live Chat</h2>
+        <div className="bg-white rounded-lg shadow md:p-6 p-4">
+          <h2 className="text-xl font-bold mb-4 text-gray-600">Live Chat</h2>
           <Chat matchId={match.id} />
         </div>
       </div>

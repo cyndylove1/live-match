@@ -75,9 +75,13 @@ export function MatchCard({ match, onClick }: MatchCardProps) {
         </div>
 
         <div className="mx-6 flex items-center">
-          <div className="text-sm font-[600]">{match.homeScore}</div>
-          <div className="text-gray-400">-</div>
-          <div className="text-sm font-[600]">{match.awayScore}</div>
+          <div className="text-sm font-[600] text-gray-600">
+            {match.homeScore}
+          </div>
+          <div className="text-gray-600">-</div>
+          <div className="text-sm font-[600] text-gray-600">
+            {match.awayScore}
+          </div>
         </div>
 
         <div className="flex-1 text-left">
