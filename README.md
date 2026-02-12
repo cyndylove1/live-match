@@ -14,23 +14,79 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Live Match Center 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A real-time football match center application with live scores, match events, statistics, and chat functionality.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+### Completed Requirements
 
-To learn more about Next.js, take a look at the following resources:
+1. **Match Dashboard**
+   - Real-time score updates without page refresh
+   - Visual distinction between live, upcoming, and finished matches
+   - Click to navigate to match details
+   - Auto-refresh every 30 seconds
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Match Detail View**
+   - Live score display with match minute
+   - Match timeline with events (goals, cards, substitutions)
+   - Live statistics with visual progress bars
+   - Proper cleanup of connections when leaving view
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Match Chat**
+   - Real-time chat room per match
+   - Typing indicators
+   - User identity stored in localStorage
+   - Username change functionality
+   - Character limit validation (500 chars)
+   - Online user count
 
-## Deploy on Vercel
+4. **Connection Handling**
+   - WebSocket connection with automatic reconnection
+   - Connection status indicator
+   - Graceful error handling
+   - State recovery after reconnection
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Additional Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Responsive design (mobile, tablet, desktop)
+- Smooth animations and transitions
+- Loading states and error boundaries
+- Auto-scroll chat to newest messages
+- Match progress indicator
+- Visual statistics with progress bars
+- Clean UI with Tailwind CSS
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Real-time**: Socket.IO Client
+- **State Management**: React Hooks
+- **Deployment**: Vercel (recommended)
+
+## Project Structure
+
+live-match-center/
+├── app/ # Next.js app router pages
+├── components/ # Reusable React components
+├── hooks/ # Custom React hooks
+├── lib/ # API and socket clients, types
+└── utils/ # Constants and helper functions
+
+## Deployment
+
+**Live Application**: https://live-match.vercel.app  
+**GitHub Repository**: https://github.com/yourusername/live-match-center
+
+## Setup Instructions
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/live-match-center.git
+cd live-match
+
+```

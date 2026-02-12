@@ -1,0 +1,21 @@
+
+export const MATCH_STATUS = {
+  NOT_STARTED: "NOT_STARTED",
+  FIRST_HALF: "FIRST_HALF",
+  HALF_TIME: "HALF_TIME",
+  SECOND_HALF: "SECOND_HALF",
+  FULL_TIME: "FULL_TIME",
+} as const;
+
+export const EVENT_TYPES = {
+  GOAL: "GOAL",
+  YELLOW_CARD: "YELLOW_CARD",
+  RED_CARD: "RED_CARD",
+  SUBSTITUTION: "SUBSTITUTION",
+  FOUL: "FOUL",
+  SHOT: "SHOT",
+} as const;
+
+export const MAX_CHAT_MESSAGE_LENGTH = 500;
+export const RECONNECT_DELAY = 1000;
+export const MAX_RECONNECT_ATTEMPTS = 5;
