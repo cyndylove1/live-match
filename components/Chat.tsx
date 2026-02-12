@@ -67,7 +67,8 @@ export function Chat({ matchId }: ChatProps) {
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center space-x-2">
           <div className="text-sm font-medium text-gray-600">Chat Room</div>
-          <div className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+          <div className="md:text-xs text-sm text-gray-500 bg-gray-100 px-2 whitespace-nowrap
+ py-1 rounded">
             {users.length} user{users.length !== 1 ? "s" : ""} online
           </div>
         </div>
@@ -178,7 +179,7 @@ export function Chat({ matchId }: ChatProps) {
           />
           <button
             type="submit"
-            className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-400"
+            className="w-full py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-400"
             disabled={!message.trim()}
           >
             Send
