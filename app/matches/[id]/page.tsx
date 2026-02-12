@@ -2,10 +2,10 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { useMatchDetail } from "@/hooks/useMatchDetail";
-import { MatchDetail as MatchDetailComponent } from "@/components/MatchDetails";
-import { useEffect } from "react";
-import Link from "next/link";
 import { Button } from "@/components/Button";
+import { MatchDetail as MatchDetailComponent } from "@/components/MatchDetails";
+import Link from "next/link";
+
 
 export default function MatchPage() {
   const params = useParams();
