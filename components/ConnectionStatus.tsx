@@ -9,7 +9,7 @@ export function ConnectionStatus() {
       <div
         className={`w-3 h-3 rounded-full ${isConnected ? "bg-green-500" : "bg-red-500"}`}
       ></div>
-      <span className="text-sm font-medium">
+      <span className="text-sm font-medium text-gray-600">
         {isConnected ? "Connected" : "Disconnected"}
       </span>
     </div>

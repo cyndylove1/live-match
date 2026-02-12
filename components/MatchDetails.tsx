@@ -17,7 +17,7 @@ export function MatchDetail({ match }: MatchDetailProps) {
       <div className="bg-white rounded-lg shadow-lg py-2 px-3 md:p-6">
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h1 className="text-2xl font-bold">Match Details</h1>
+            <h1 className="text-2xl font-bold text-gray-600">Match Details</h1>
             <div className="flex items-center mt-2">
               <ConnectionStatus />
               {isLive && (
@@ -40,20 +40,28 @@ export function MatchDetail({ match }: MatchDetailProps) {
 
         <div className="flex justify-between items-center mb-8">
           <div className="text-center flex-1">
-            <div className="md:text-xl text-sm font-bold">{match.homeTeam.name}</div>
+            <div className="md:text-xl text-sm font-bold text-gray-600">
+              {match.homeTeam.name}
+            </div>
             <div className="text-sm text-gray-600">
               {match.homeTeam.shortName}
             </div>
           </div>
 
           <div className="mx-8 flex items-center">
-            <div className="md:text-3xl text-xl font-bold mx-4">{match.homeScore}</div>
+            <div className="md:text-3xl text-xl font-bold text-gray-600 mx-4">
+              {match.homeScore}
+            </div>
             <div className="md:text-3xl text-xl text-gray-400">-</div>
-            <div className="md:text-3xl text-xl  font-bold mx-4">{match.awayScore}</div>
+            <div className="md:text-3xl text-xl  font-bold mx-4">
+              {match.awayScore}
+            </div>
           </div>
 
           <div className="text-center flex-1">
-            <div className="md:text-xl text-sm font-bold">{match.awayTeam.name}</div>
+            <div className="md:text-xl text-sm font-bold text-gray-600">
+              {match.awayTeam.name}
+            </div>
             <div className="text-sm text-gray-600">
               {match.awayTeam.shortName}
             </div>
@@ -73,12 +81,14 @@ export function MatchDetail({ match }: MatchDetailProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-6">
           <div className="bg-white rounded-lg shadow md:p-6 p-4">
-            <h2 className="text-xl font-bold mb-4">Match Events</h2>
+            <h2 className="text-xl font-bold mb-4 text-gray-600">
+              Match Events
+            </h2>
             <MatchEvents events={match.events} />
           </div>
 
           <div className="bg-white rounded-lg shadow md:p-6 p-4">
-            <h2 className="text-xl font-bold mb-4">Statistics</h2>
+            <h2 className="text-xl font-bold mb-4 text-gray-600">Statistics</h2>
             <MatchStats statistics={match.statistics} />
           </div>
         </div>

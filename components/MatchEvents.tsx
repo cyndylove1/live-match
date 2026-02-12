@@ -52,7 +52,9 @@ export function MatchEvents({ events }: MatchEventsProps) {
             </div>
 
             <div className="ml-4 flex-1">
-              <div className="font-medium">{event.description}</div>
+              <div className="font-medium text-gray-600">
+                {event.description}
+              </div>
               <div className="text-sm text-gray-600 mt-1">
                 {event.player}
                 {event.assistPlayer && ` (assist: ${event.assistPlayer})`}

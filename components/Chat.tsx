@@ -66,14 +66,14 @@ export function Chat({ matchId }: ChatProps) {
     <div className="flex flex-col h-[500px]">
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center space-x-2">
-          <div className="text-sm font-medium">Chat Room</div>
+          <div className="text-sm font-medium text-gray-600">Chat Room</div>
           <div className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
             {users.length} user{users.length !== 1 ? "s" : ""} online
           </div>
         </div>
 
         <div className="flex items-center space-x-2">
-          <div className="text-sm">Logged in as: {username}</div>
+          <div className="text-sm text-gray-600">Logged in as: {username}</div>
           <button
             onClick={() => {
               setNewUsername(username);
@@ -93,7 +93,7 @@ export function Chat({ matchId }: ChatProps) {
               type="text"
               value={newUsername}
               onChange={(e) => setNewUsername(e.target.value)}
-              className="flex-1 px-3 py-2 border rounded-lg text-sm"
+              className="flex-1 px-3 py-2 border rounded-lg text-sm text-gray-600"
               placeholder="Enter new username"
               maxLength={30}
             />

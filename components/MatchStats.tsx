@@ -24,7 +24,7 @@ export function MatchStats({ statistics }: MatchStatsProps) {
         return (
           <div key={stat.label} className="space-y-2">
             <div className="flex justify-between text-sm">
-              <span className="font-medium">{stat.label}</span>
+              <span className="font-medium text-gray-600">{stat.label}</span>
               <span className="text-gray-500">
                 {stat.value.home}
                 {stat.unit} - {stat.value.away}

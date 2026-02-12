@@ -8,7 +8,7 @@ export default function Home() {
   const { matches, loading, error, refreshMatches } = useMatches(false);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 bg-white">
       <div className="flex justify-between items-center">
         <div>
           <h1 className="md:text-3xl text-2xl font-bold text-gray-900">Live Matches</h1>

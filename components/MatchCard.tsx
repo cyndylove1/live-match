@@ -66,7 +66,9 @@ export function MatchCard({ match, onClick }: MatchCardProps) {
 
       <div className="flex justify-between items-center">
         <div className="flex-1 text-right">
-          <div className="font-[600] text-sm">{match.homeTeam.name}</div>
+          <div className="font-[600] text-sm text-gray-600">
+            {match.homeTeam.name}
+          </div>
           <div className="text-sm font-[600] text-gray-600">
             {match.homeTeam.shortName}
           </div>
@@ -79,7 +81,9 @@ export function MatchCard({ match, onClick }: MatchCardProps) {
         </div>
 
         <div className="flex-1 text-left">
-          <div className="font-semibold">{match.awayTeam.name}</div>
+          <div className="font-semibold text-gray-600">
+            {match.awayTeam.name}
+          </div>
           <div className="text-sm text-gray-600">
             {match.awayTeam.shortName}
           </div>
