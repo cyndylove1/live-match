@@ -1,8 +1,8 @@
 "use client";
 
+import { Button } from "@/components/Button";
 import { MatchList } from "@/components/MatchList";
 import { useMatches } from "@/hooks/useMatches";
-
 
 export default function Home() {
   const { matches, loading, error, refreshMatches } = useMatches(false);
@@ -11,18 +11,21 @@ export default function Home() {
     <div className="space-y-6 bg-white">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="md:text-3xl text-2xl font-bold text-gray-900">Live Matches</h1>
+          <h1 className="md:text-3xl text-2xl font-bold text-gray-900">
+            Live Matches
+          </h1>
           <p className="text-gray-600 md:text-md text-sm mt-2">
             Real-time football match scores and statistics
           </p>
         </div>
-        <button
+        <Button
           onClick={refreshMatches}
-          disabled={loading}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 transition-colors"
+          loading={loading}
+          loadingText="Refreshing..."
+          variant="primary"
         >
-          {loading ? "Refreshing..." : "Refresh"}
-        </button>
+          Refresh
+        </Button>
       </div>
 
       <MatchList matches={matches} loading={loading} error={error} />

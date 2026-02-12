@@ -5,6 +5,7 @@ import { useMatchDetail } from "@/hooks/useMatchDetail";
 import { MatchDetail as MatchDetailComponent } from "@/components/MatchDetails";
 import { useEffect } from "react";
 import Link from "next/link";
+import { Button } from "@/components/Button";
 
 export default function MatchPage() {
   const params = useParams();
@@ -28,18 +29,13 @@ export default function MatchPage() {
         <div className="text-red-500 text-xl font-semibold mb-2">Error</div>
         <div className="text-gray-600 mb-4">{error}</div>
         <div className="space-x-4">
-          <button
-            onClick={() => router.back()}
-            className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300"
-          >
+          <Button onClick={() => router.back()} variant="secondary">
             Go Back
-          </button>
-          <button
-            onClick={refreshMatch}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-          >
+          </Button>
+
+          <Button onClick={refreshMatch} variant="primary">
             Retry
-          </button>
+          </Button>
         </div>
       </div>
     );

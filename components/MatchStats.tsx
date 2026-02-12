@@ -23,7 +23,7 @@ export function MatchStats({ statistics }: MatchStatsProps) {
 
         return (
           <div key={stat.label} className="space-y-2">
-            <div className="flex justify-between text-sm">
+            <div className="flex justify-between text-sm gap-2">
               <span className="font-medium text-gray-600">{stat.label}</span>
               <span className="text-gray-500">
                 {stat.value.home}

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useChat } from "@/hooks/useChat";
 import { toast } from "react-toastify";
+import { Button } from "./Button";
 
 interface ChatProps {
   matchId: string;
@@ -73,15 +74,13 @@ export function Chat({ matchId }: ChatProps) {
 
         <div className="flex items-center space-x-2">
           <div className="text-sm text-gray-600">Logged in as: {username}</div>
-          <button
-            onClick={() => {
-              setNewUsername(username);
-              setIsEditingUsername(true);
-            }}
-            className="text-xs text-blue-600 hover:text-blue-800"
+          <Button
+            size="sm"
+            variant="link"
+            onClick={() => setIsEditingUsername(true)}
           >
             Change
-          </button>
+          </Button>
         </div>
       </div>
 
@@ -96,18 +95,18 @@ export function Chat({ matchId }: ChatProps) {
               placeholder="Enter new username"
               maxLength={30}
             />
-            <button
-              onClick={handleUsernameUpdate}
-              className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm"
-            >
+
+            <Button size="sm" onClick={handleUsernameUpdate}>
               Save
-            </button>
-            <button
+            </Button>
+
+            <Button
+              size="sm"
+              variant="secondary"
               onClick={() => setIsEditingUsername(false)}
-              className="px-3 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 text-sm"
             >
               Cancel
-            </button>
+            </Button>
           </div>
         </div>
       )}
@@ -175,13 +174,9 @@ export function Chat({ matchId }: ChatProps) {
             className="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             maxLength={500}
           />
-          <button
-            type="submit"
-            className="w-full py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-400"
-            disabled={!message.trim()}
-          >
+          <Button type="submit" variant="success" disabled={!message.trim()}>
             Send
-          </button>
+          </Button>
         </div>
         <div className="text-xs text-gray-500 text-right">
           {message.length}/500 characters
